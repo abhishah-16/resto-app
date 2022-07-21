@@ -8,12 +8,12 @@ import { UpdateRestoComponent } from './update-resto/update-resto.component';
 
 const routes: Routes = [
   {
-    path: 'add',
-    component: AddRestoComponent
+    path: '',
+    component: ListRestoComponent
   },
   {
-    path: 'list',
-    component: ListRestoComponent
+    path: 'add',
+    component: AddRestoComponent
   },
   {
     path: 'login',
@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'update/:id',
     component: UpdateRestoComponent
-  }
+  },
+  
 ];
 
 @NgModule({
