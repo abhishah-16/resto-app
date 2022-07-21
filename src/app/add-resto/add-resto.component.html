@@ -1,0 +1,22 @@
+<form class="container" [formGroup]="addResto" (ngSubmit)="createResto()" style="margin-top:50px">
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your Restaurant has been added
+        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span>&times;</span>
+        </button>
+      </div>
+    <h3 style="color:#d9534f">Add New Restaurant</h3><br>
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" name="" id="" placeholder="Enter Name" formControlName="name">
+    </div><br>
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" class="form-control" name="" id="" placeholder="Enter Email" formControlName="email">
+    </div><br>
+    <div class="form-group">
+        <label for="">Address</label>
+        <input type="text" class="form-control" name="" id="" placeholder="Enter Address" formControlName="address">
+    </div><br><br>
+    <button type="submit" class="btn btn-danger">Submit</button>
+</form>

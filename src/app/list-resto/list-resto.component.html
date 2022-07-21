@@ -1,0 +1,21 @@
+<table class="table table-hover container" style="margin-top:50px">
+    <thead class="thead-dark bg-danger">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Oprations</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let r of resto let i=index">
+        <tr>
+            <th scope="row">{{i+1}}</th>
+            <td>{{r.name}}</td>
+            <td>{{r.address}}</td>
+            <td>{{r.email}}</td>
+            <td><a routerLink = "/update/{{i}}"><i class="fa fa-edit" style="font-size:20px;color:#1976D2;"></i></a>  |  
+                <i (click)="onDelete(i)" class="fa fa-trash" style="font-size:20px;color:#d9534f;"></i></td>
+        </tr>   
+    </tbody>
+</table>
